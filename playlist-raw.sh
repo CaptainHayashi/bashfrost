@@ -10,7 +10,7 @@ fi
 
 while read -u 10 item;
 do
-	echo "playing" $item 1>&2
+	echo "playing" "$item" 1>&2
 	./sendcmd-raw.sh fload "$item"
 	./sendcmd-raw.sh play
 
