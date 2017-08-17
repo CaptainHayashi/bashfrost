@@ -18,10 +18,20 @@ Bashfrost is not production-ready!  We know of the following issues:
 That said, I use this and `playd` as a music player quite frequently.
 
 
+## Requirements
+
+* A sufficiently `bash`-style shell (usually anything emulating a Bourne shell
+  will work, see below for script-specific information);
+* `socat`, for sending commands across the network;
+* `realpath`, for resolving paths (part of GNU coreutils, preinstalled on most
+  GNU/Linux systems but will need installing manually on BSDs and macOS).
+
+
 ## Scripts
 
 The user-facing scripts are:
 
+* `fload.sh FILE`: asks the Bifrost player to load `FILE`;
 * `random.sh PATH`: sends random songs from `PATH` to the Bifrost
   player;
 * `play.sh`, `stop.sh`, `end.sh` and `eject.sh`: send their respective
@@ -33,7 +43,7 @@ All but `random.sh` work on any `sh`; `random.sh` needs `bash`.
 
 ## Environment variables
 
-* `BIFROST`: a TCP `host:port` used to connect to the Bifrost server.`
+* `BIFROST`: a TCP `host:port` used to connect to the Bifrost server.
 
 
 ## Licence
